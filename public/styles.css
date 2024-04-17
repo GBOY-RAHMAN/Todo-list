@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #008DDA;
+    --secundary-color: #41C9E2;
+    --first-optional-color: #67C6E3;
+    --second-optional-color: #DFF5FF;
+    --white: #fff;
+    --black: #000;
+    --gray: #afafaf;
+   }
+   * {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+   }
+   main {
+    
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secundary-color));
+    padding: 10px;
+   }
+   .todo-app {width: 100%;
+    max-width: 540px;
+    background: var(--white);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+   }
+   .todo-app h2 {
+    color: var(--first-optional-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   }
+   .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+   }
+   #task-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--second-optional-color);
+    border-radius: 30px;
+    padding-left: 20px;
+ margin-bottom: 25px;
+}
+#task-form input {
+ flex: 1;
+ border: none;
+ outline: none;
+ background: transparent;
+ padding: 10px;
+ font-weight: 14px;
+}
+#task-form button {
+ border: none;
+ outline: none;
+ padding: 16px 50px;
+ background: var(--primary-color);
+ color: var(--white);
+ font-size: 16px;
+ cursor: pointer;
+ border-radius: 40px;
+}
+#task-form button:hover {
+ background: var(--secundary-color);
+}
+ul li {
+ list-style: none;
+ font-size: 17px;
+ padding: 12px 8px 12px 50px;
+ user-select: none;
+ cursor: pointer;
+ position: relative;
+}
+ul li::before {
+ content: '';
+ position: absolute;
+ height: 28px;
+ width: 28px;
+ background-image: url(../images/unchecked.png);
+ background-size: cover;
+ background-position: center;
+ top: 8px;
+ left: 8px;
+}
+ul li.checked {
+ color: var(--black);
+ text-decoration: line-through;
+}
+ul li.checked::before {
+ background-image: url(../images/checked.png);
+}
+ul li span {
+ position: absolute;
+ right: 0;
+ top: 5px;
+ width: 40px;
+ height: 40px;
+ font-size: 22px;
+ color: var(--black);
+ line-height: 40px;
+ text-align: center;
+ border-radius: 50%;
+}
+ul li span:hover {
+ background: var(--gray);
+}
